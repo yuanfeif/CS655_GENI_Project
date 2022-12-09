@@ -1,0 +1,108 @@
+Server 
+
+guoyf1@pc5:~$ iperf -s
+------------------------------------------------------------
+Server listening on TCP port 5001
+TCP window size:  128 KByte (default)
+------------------------------------------------------------
+i[  4] local 10.10.4.2 port 5001 connected with 10.10.1.1 port 41696
+[  5] local 10.10.4.2 port 5001 connected with 10.10.2.2 port 34332
+[  6] local 10.10.4.2 port 5001 connected with 10.10.3.1 port 47700
+[  7] local 10.10.4.2 port 5001 connected with 10.10.5.1 port 46040
+[ ID] Interval       Transfer     Bandwidth
+[  4]  0.0-62.9 sec   127 MBytes  17.0 Mbits/sec
+[  5]  0.0-60.3 sec  91.0 MBytes  12.6 Mbits/sec
+[  6]  0.0-60.5 sec  47.8 MBytes  6.62 Mbits/sec
+[  7]  0.0-60.2 sec   499 MBytes  69.5 Mbits/sec
+
+Client reno
+
+guoyf1@pc1:~$ iperf -c pc5 -t 60 -i 5
+------------------------------------------------------------
+Client connecting to pc5, TCP port 5001
+TCP window size: 85.0 KByte (default)
+------------------------------------------------------------
+[  3] local 10.10.1.1 port 41696 connected with 10.10.4.2 port 5001
+[ ID] Interval       Transfer     Bandwidth
+[  3]  0.0- 5.0 sec  49.6 MBytes  83.3 Mbits/sec
+[  3]  5.0-10.0 sec  13.6 MBytes  22.8 Mbits/sec
+[  3] 10.0-15.0 sec  2.55 MBytes  4.27 Mbits/sec
+[  3] 15.0-20.0 sec  6.88 MBytes  11.5 Mbits/sec
+[  3] 20.0-25.0 sec  6.75 MBytes  11.3 Mbits/sec
+[  3] 25.0-30.0 sec  8.25 MBytes  13.8 Mbits/sec
+[  3] 30.0-35.0 sec  5.50 MBytes  9.23 Mbits/sec
+[  3] 35.0-40.0 sec  6.75 MBytes  11.3 Mbits/sec
+[  3] 40.0-45.0 sec  5.50 MBytes  9.23 Mbits/sec
+[  3] 45.0-50.0 sec  6.88 MBytes  11.5 Mbits/sec
+[  3] 50.0-55.0 sec  6.88 MBytes  11.5 Mbits/sec
+[  3] 55.0-60.0 sec  8.12 MBytes  13.6 Mbits/sec
+[  3]  0.0-60.6 sec   127 MBytes  17.6 Mbits/sec
+
+Client cubic
+
+guoyf1@pc2:~$ iperf -c pc5 -t 60 -i 5
+------------------------------------------------------------
+Client connecting to pc5, TCP port 5001
+TCP window size: 85.0 KByte (default)
+------------------------------------------------------------
+[  3] local 10.10.2.2 port 34332 connected with 10.10.4.2 port 5001
+[ ID] Interval       Transfer     Bandwidth
+[  3]  0.0- 5.0 sec  24.4 MBytes  40.9 Mbits/sec
+[  3]  5.0-10.0 sec  3.50 MBytes  5.87 Mbits/sec
+[  3] 10.0-15.0 sec  4.50 MBytes  7.55 Mbits/sec
+[  3] 15.0-20.0 sec  7.50 MBytes  12.6 Mbits/sec
+[  3] 20.0-25.0 sec  7.88 MBytes  13.2 Mbits/sec
+[  3] 25.0-30.0 sec  5.62 MBytes  9.44 Mbits/sec
+[  3] 30.0-35.0 sec  6.00 MBytes  10.1 Mbits/sec
+[  3] 35.0-40.0 sec  5.50 MBytes  9.23 Mbits/sec
+[  3] 40.0-45.0 sec  6.25 MBytes  10.5 Mbits/sec
+[  3] 45.0-50.0 sec  6.75 MBytes  11.3 Mbits/sec
+[  3] 50.0-55.0 sec  6.50 MBytes  10.9 Mbits/sec
+[  3] 55.0-60.0 sec  6.62 MBytes  11.1 Mbits/sec
+[  3]  0.0-60.1 sec  91.0 MBytes  12.7 Mbits/sec
+
+Client Vegas
+
+guoyf1@pc3:~$ iperf -c pc5 -t 60 -i 5
+------------------------------------------------------------
+Client connecting to pc5, TCP port 5001
+TCP window size: 85.0 KByte (default)
+------------------------------------------------------------
+[  3] local 10.10.3.1 port 47700 connected with 10.10.4.2 port 5001
+[ ID] Interval       Transfer     Bandwidth
+[  3]  0.0- 5.0 sec  3.50 MBytes  5.87 Mbits/sec
+[  3]  5.0-10.0 sec  2.12 MBytes  3.57 Mbits/sec
+[  3] 10.0-15.0 sec  2.75 MBytes  4.61 Mbits/sec
+[  3] 15.0-20.0 sec  5.00 MBytes  8.39 Mbits/sec
+[  3] 20.0-25.0 sec  5.25 MBytes  8.81 Mbits/sec
+[  3] 25.0-30.0 sec  3.75 MBytes  6.29 Mbits/sec
+[  3] 30.0-35.0 sec  4.25 MBytes  7.13 Mbits/sec
+[  3] 35.0-40.0 sec  3.75 MBytes  6.29 Mbits/sec
+[  3] 40.0-45.0 sec  4.75 MBytes  7.97 Mbits/sec
+[  3] 45.0-50.0 sec  4.75 MBytes  7.97 Mbits/sec
+[  3] 50.0-55.0 sec  4.38 MBytes  7.34 Mbits/sec
+[  3] 55.0-60.0 sec  3.50 MBytes  5.87 Mbits/sec
+[  3]  0.0-60.0 sec  47.8 MBytes  6.67 Mbits/sec
+
+Client BBR
+
+guoyf1@pc4:~$ iperf -c pc5 -t 60 -i 5
+------------------------------------------------------------
+Client connecting to pc5, TCP port 5001
+TCP window size:  128 KByte (default)
+------------------------------------------------------------
+[  3] local 10.10.5.1 port 46040 connected with 10.10.4.2 port 5001
+[ ID] Interval       Transfer     Bandwidth
+[  3]  0.0- 5.0 sec  50.8 MBytes  85.1 Mbits/sec
+[  3]  5.0-10.0 sec  49.0 MBytes  82.2 Mbits/sec
+[  3] 10.0-15.0 sec  35.0 MBytes  58.7 Mbits/sec
+[  3] 15.0-20.0 sec  36.2 MBytes  60.8 Mbits/sec
+[  3] 20.0-25.0 sec  39.2 MBytes  65.9 Mbits/sec
+[  3] 25.0-30.0 sec  41.8 MBytes  70.0 Mbits/sec
+[  3] 30.0-35.0 sec  40.2 MBytes  67.5 Mbits/sec
+[  3] 35.0-40.0 sec  40.6 MBytes  68.2 Mbits/sec
+[  3] 40.0-45.0 sec  36.5 MBytes  61.2 Mbits/sec
+[  3] 45.0-50.0 sec  39.0 MBytes  65.4 Mbits/sec
+[  3] 50.0-55.0 sec  38.2 MBytes  64.2 Mbits/sec
+[  3] 55.0-60.0 sec  52.0 MBytes  87.2 Mbits/sec
+[  3]  0.0-60.0 sec   499 MBytes  69.7 Mbits/sec
