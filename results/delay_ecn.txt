@@ -1,0 +1,111 @@
+# Reno
+ffyuan@romeo:~$ ping -c 20 juliet
+PING juliet-link-1 (10.10.2.100) 56(84) bytes of data.
+64 bytes from juliet-link-1 (10.10.2.100): icmp_seq=1 ttl=63 time=1.10 ms
+64 bytes from juliet-link-1 (10.10.2.100): icmp_seq=2 ttl=63 time=0.736 ms
+64 bytes from juliet-link-1 (10.10.2.100): icmp_seq=3 ttl=63 time=1.04 ms
+64 bytes from juliet-link-1 (10.10.2.100): icmp_seq=4 ttl=63 time=0.790 ms
+64 bytes from juliet-link-1 (10.10.2.100): icmp_seq=5 ttl=63 time=1.05 ms
+64 bytes from juliet-link-1 (10.10.2.100): icmp_seq=6 ttl=63 time=1.04 ms
+64 bytes from juliet-link-1 (10.10.2.100): icmp_seq=7 ttl=63 time=0.940 ms
+64 bytes from juliet-link-1 (10.10.2.100): icmp_seq=8 ttl=63 time=0.926 ms
+64 bytes from juliet-link-1 (10.10.2.100): icmp_seq=9 ttl=63 time=1.03 ms
+64 bytes from juliet-link-1 (10.10.2.100): icmp_seq=10 ttl=63 time=0.977 ms
+64 bytes from juliet-link-1 (10.10.2.100): icmp_seq=11 ttl=63 time=0.933 ms
+64 bytes from juliet-link-1 (10.10.2.100): icmp_seq=12 ttl=63 time=0.969 ms
+64 bytes from juliet-link-1 (10.10.2.100): icmp_seq=13 ttl=63 time=0.854 ms
+64 bytes from juliet-link-1 (10.10.2.100): icmp_seq=14 ttl=63 time=0.827 ms
+64 bytes from juliet-link-1 (10.10.2.100): icmp_seq=15 ttl=63 time=0.885 ms
+64 bytes from juliet-link-1 (10.10.2.100): icmp_seq=16 ttl=63 time=0.854 ms
+64 bytes from juliet-link-1 (10.10.2.100): icmp_seq=17 ttl=63 time=0.897 ms
+64 bytes from juliet-link-1 (10.10.2.100): icmp_seq=18 ttl=63 time=0.758 ms
+64 bytes from juliet-link-1 (10.10.2.100): icmp_seq=19 ttl=63 time=0.777 ms
+64 bytes from juliet-link-1 (10.10.2.100): icmp_seq=20 ttl=63 time=0.951 ms
+
+--- juliet-link-1 ping statistics ---
+20 packets transmitted, 20 received, 0% packet loss, time 19085ms
+rtt min/avg/max/mdev = 0.736/0.918/1.106/0.110 ms
+
+#Cubic
+ffyuan@romeo:~$ ping -c 20 juliet
+PING juliet-link-1 (10.10.2.100) 56(84) bytes of data.
+64 bytes from juliet-link-1 (10.10.2.100): icmp_seq=1 ttl=63 time=0.659 ms
+64 bytes from juliet-link-1 (10.10.2.100): icmp_seq=2 ttl=63 time=0.583 ms
+64 bytes from juliet-link-1 (10.10.2.100): icmp_seq=3 ttl=63 time=0.630 ms
+64 bytes from juliet-link-1 (10.10.2.100): icmp_seq=4 ttl=63 time=0.696 ms
+64 bytes from juliet-link-1 (10.10.2.100): icmp_seq=5 ttl=63 time=0.472 ms
+64 bytes from juliet-link-1 (10.10.2.100): icmp_seq=6 ttl=63 time=0.432 ms
+64 bytes from juliet-link-1 (10.10.2.100): icmp_seq=7 ttl=63 time=0.461 ms
+64 bytes from juliet-link-1 (10.10.2.100): icmp_seq=8 ttl=63 time=0.636 ms
+64 bytes from juliet-link-1 (10.10.2.100): icmp_seq=9 ttl=63 time=0.628 ms
+64 bytes from juliet-link-1 (10.10.2.100): icmp_seq=10 ttl=63 time=0.669 ms
+64 bytes from juliet-link-1 (10.10.2.100): icmp_seq=11 ttl=63 time=0.635 ms
+64 bytes from juliet-link-1 (10.10.2.100): icmp_seq=12 ttl=63 time=0.516 ms
+64 bytes from juliet-link-1 (10.10.2.100): icmp_seq=13 ttl=63 time=0.470 ms
+64 bytes from juliet-link-1 (10.10.2.100): icmp_seq=14 ttl=63 time=0.710 ms
+64 bytes from juliet-link-1 (10.10.2.100): icmp_seq=15 ttl=63 time=0.484 ms
+64 bytes from juliet-link-1 (10.10.2.100): icmp_seq=16 ttl=63 time=0.510 ms
+64 bytes from juliet-link-1 (10.10.2.100): icmp_seq=17 ttl=63 time=0.771 ms
+64 bytes from juliet-link-1 (10.10.2.100): icmp_seq=18 ttl=63 time=0.484 ms
+64 bytes from juliet-link-1 (10.10.2.100): icmp_seq=19 ttl=63 time=0.548 ms
+64 bytes from juliet-link-1 (10.10.2.100): icmp_seq=20 ttl=63 time=0.582 ms
+
+--- juliet-link-1 ping statistics ---
+20 packets transmitted, 20 received, 0% packet loss, time 19278ms
+rtt min/avg/max/mdev = 0.432/0.578/0.771/0.099 ms
+
+# Vegas
+ffyuan@romeo:~$ ping -c 20 juliet
+PING juliet-link-1 (10.10.2.100) 56(84) bytes of data.
+64 bytes from juliet-link-1 (10.10.2.100): icmp_seq=1 ttl=63 time=1.11 ms
+64 bytes from juliet-link-1 (10.10.2.100): icmp_seq=2 ttl=63 time=0.896 ms
+64 bytes from juliet-link-1 (10.10.2.100): icmp_seq=3 ttl=63 time=1.00 ms
+64 bytes from juliet-link-1 (10.10.2.100): icmp_seq=4 ttl=63 time=0.975 ms
+64 bytes from juliet-link-1 (10.10.2.100): icmp_seq=5 ttl=63 time=0.900 ms
+64 bytes from juliet-link-1 (10.10.2.100): icmp_seq=6 ttl=63 time=0.872 ms
+64 bytes from juliet-link-1 (10.10.2.100): icmp_seq=7 ttl=63 time=1.07 ms
+64 bytes from juliet-link-1 (10.10.2.100): icmp_seq=8 ttl=63 time=0.843 ms
+64 bytes from juliet-link-1 (10.10.2.100): icmp_seq=9 ttl=63 time=0.976 ms
+64 bytes from juliet-link-1 (10.10.2.100): icmp_seq=10 ttl=63 time=0.683 ms
+64 bytes from juliet-link-1 (10.10.2.100): icmp_seq=11 ttl=63 time=0.922 ms
+64 bytes from juliet-link-1 (10.10.2.100): icmp_seq=12 ttl=63 time=0.966 ms
+64 bytes from juliet-link-1 (10.10.2.100): icmp_seq=13 ttl=63 time=1.04 ms
+64 bytes from juliet-link-1 (10.10.2.100): icmp_seq=14 ttl=63 time=0.688 ms
+64 bytes from juliet-link-1 (10.10.2.100): icmp_seq=15 ttl=63 time=0.877 ms
+64 bytes from juliet-link-1 (10.10.2.100): icmp_seq=16 ttl=63 time=0.832 ms
+64 bytes from juliet-link-1 (10.10.2.100): icmp_seq=17 ttl=63 time=0.914 ms
+64 bytes from juliet-link-1 (10.10.2.100): icmp_seq=18 ttl=63 time=0.894 ms
+64 bytes from juliet-link-1 (10.10.2.100): icmp_seq=19 ttl=63 time=0.977 ms
+64 bytes from juliet-link-1 (10.10.2.100): icmp_seq=20 ttl=63 time=0.809 ms
+
+--- juliet-link-1 ping statistics ---
+20 packets transmitted, 20 received, 0% packet loss, time 19029ms
+rtt min/avg/max/mdev = 0.683/0.913/1.113/0.111 ms
+
+# bbr
+ffyuan@romeo:~$ ping -c 20 juliet
+PING juliet-link-1 (10.10.2.100) 56(84) bytes of data.
+64 bytes from juliet-link-1 (10.10.2.100): icmp_seq=1 ttl=63 time=0.942 ms
+64 bytes from juliet-link-1 (10.10.2.100): icmp_seq=2 ttl=63 time=0.684 ms
+64 bytes from juliet-link-1 (10.10.2.100): icmp_seq=3 ttl=63 time=0.685 ms
+64 bytes from juliet-link-1 (10.10.2.100): icmp_seq=4 ttl=63 time=0.963 ms
+64 bytes from juliet-link-1 (10.10.2.100): icmp_seq=5 ttl=63 time=0.862 ms
+64 bytes from juliet-link-1 (10.10.2.100): icmp_seq=6 ttl=63 time=0.954 ms
+64 bytes from juliet-link-1 (10.10.2.100): icmp_seq=7 ttl=63 time=0.823 ms
+64 bytes from juliet-link-1 (10.10.2.100): icmp_seq=8 ttl=63 time=0.905 ms
+64 bytes from juliet-link-1 (10.10.2.100): icmp_seq=9 ttl=63 time=1.00 ms
+64 bytes from juliet-link-1 (10.10.2.100): icmp_seq=10 ttl=63 time=0.985 ms
+64 bytes from juliet-link-1 (10.10.2.100): icmp_seq=11 ttl=63 time=0.943 ms
+64 bytes from juliet-link-1 (10.10.2.100): icmp_seq=12 ttl=63 time=0.920 ms
+64 bytes from juliet-link-1 (10.10.2.100): icmp_seq=13 ttl=63 time=0.899 ms
+64 bytes from juliet-link-1 (10.10.2.100): icmp_seq=14 ttl=63 time=0.924 ms
+64 bytes from juliet-link-1 (10.10.2.100): icmp_seq=15 ttl=63 time=0.891 ms
+64 bytes from juliet-link-1 (10.10.2.100): icmp_seq=16 ttl=63 time=0.897 ms
+64 bytes from juliet-link-1 (10.10.2.100): icmp_seq=17 ttl=63 time=0.976 ms
+64 bytes from juliet-link-1 (10.10.2.100): icmp_seq=18 ttl=63 time=0.912 ms
+64 bytes from juliet-link-1 (10.10.2.100): icmp_seq=19 ttl=63 time=0.861 ms
+64 bytes from juliet-link-1 (10.10.2.100): icmp_seq=20 ttl=63 time=0.881 ms
+
+--- juliet-link-1 ping statistics ---
+20 packets transmitted, 20 received, 0% packet loss, time 19034ms
+rtt min/avg/max/mdev = 0.684/0.895/1.001/0.086 ms
